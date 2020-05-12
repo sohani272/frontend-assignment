@@ -1,0 +1,194 @@
+#root{
+  height: 100%; 
+}
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.app{
+  padding: 25px;
+  display: flex;
+  height: 100%;
+}
+
+.sidepanel-container{
+  border: 2px solid black;
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  min-width: 350px;
+  width: 20%;
+  height:95%;
+  background: #8080800d;
+}
+
+.horiz-separator{
+  border: 1px solid black;
+  width: 100%;
+  margin: 15px 0px;
+}
+
+.add-location{
+  display: flex;
+}
+
+.add-location form{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.add-location form button{
+  width:25px;
+  border: none;
+  background: #80808000;
+}
+
+.add-location form button:focus{
+  outline: none !important;
+}
+
+.add-location form button span{
+font-size: 22px;
+}
+
+.add-location form input{
+  width: calc(100% - 45px);
+  border: none;
+  border-bottom: 1px solid grey !important;
+  padding: 5px 5px;
+  background-color: #80808000;
+}
+
+.add-location form input:focus{
+  outline: none !important;
+}
+
+.recent-locatons-heading{
+  border-bottom: 2px solid gainsboro;
+  padding-bottom: 2px;
+  font-size: 12px;
+}
+.recent-locations-container{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.locations-list{
+  border-bottom: 2px solid gainsboro;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.locations-list .location-name{
+  width: calc(100% - 80px);
+}
+
+.locations-list .location-name:hover{
+  cursor: pointer;
+}
+
+
+.locations-list button{
+  width:25px;
+  border: none;
+  background: #80808000;
+  margin-left: 10px;
+}
+
+.locations-list button span{
+ font-size:22px;
+}
+
+.clear-all{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.clear-all-button{
+  padding: 5px 25px;
+  border: none;
+  background: gainsboro;
+  font-weight: bold;
+}
+
+.weather-report-container{
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 2px solid black;
+  padding: 0px 25px 30px 25px;
+  margin-left: 5px;
+  justify-content: space-between;
+  background: #8080800d;
+  height:95%;
+}
+
+.weather-detail{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.weather-icon {
+  display: flex;
+}
+
+.weather-icon div{
+  width: 30%;
+  min-width: 300px;
+}
+
+.weather-report-days{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.display-message{
+  display: flex;
+  height: 100%;
+  width:100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-detail button{
+  width:25px;
+  border: none;
+  height: 40px;
+  background: #80808000;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+
+.weather-detail button span{
+ font-size:22px;
+}
+
+.weather-image{
+  height: 100%;
+  text-align: center;
+}
+
+.weather-image img{
+  height: 100%;
+}
+
+.action-icons:focus{
+  outline: none !important;
+}
+
+.five-days-report p{
+  margin-left: 10px;
+}
