@@ -74,19 +74,19 @@ export const getWeatherIcon = (icon) => {
             return 'snowy-3.svg';
             break;
         case '09d':
-            return 'rainy4.svg';
+            return 'rainy-6.svg';
             break;
         case '09n':
-            return 'rainy4.svg';
+            return 'rainy-6.svg';
             break;
         case '10d':
             return 'rainy1.svg';
             break;
         case '10n':
-            return 'rainy4.svg';
+            return 'rainy-6.svg';
             break;
         default:
-            return 'rainy4.svg';
+            return 'day.svg';
             break;
     }
 }

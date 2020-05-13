@@ -42,6 +42,7 @@ class LocationsList extends Component {
         }
         this.props.updateLocations(newLocations);
         this.props.resetNewLocation();
+        this.props.resetLocationData();
     }
 
     refreshLocationData = (locationId) => {

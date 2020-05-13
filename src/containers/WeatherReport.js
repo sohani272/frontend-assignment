@@ -74,19 +74,22 @@ class WeatherReport extends Component {
                                 <p>{this.state.locationData && this.state.locationData.wind ? 'Wind:' + ' ' + this.state.locationData.wind.speed : ''}</p>
                             </div>
                         </div>
-                        <div className='weather-report-days'>
+                        {this.props.locationWeatherData !== undefined ?  <div className='weather-report-days'>
                             {this.state.fiveDaysWeatherReport && this.state.fiveDaysWeatherReport.length > 0 ?
                                 this.state.fiveDaysWeatherReport.map((report, index) => {
                                     return (
                                         <div key={index} className='five-days-report'>
                                             <p>{this.getDate(report.dt_txt)}</p>
                                             <p>{this.getDayFromDate(report.dt_txt)}</p>
-                                            {report && report.weather && report.weather.length > 0 ? <img src={require(`../assets/images/${getWeatherIcon(report.weather[0].icon)}`)} /> : <div></div>} 
-                                            <p>{convertFahrenheitToCelsius(report.main && report.main.temp)}</p>
+                                            {report && report.weather && report.weather.length > 0 ? 
+                                                <img src={require(`../assets/images/${getWeatherIcon(report.weather[0].icon)}`)} /> 
+                                                : <div></div>
+                                            } 
+                                           {report.main && report.main.temp ? <p>{convertFahrenheitToCelsius(report.main.temp)}</p> : null}
                                         </div>
                                     );
                                 }) : ''}
-                        </div>
+                        </div> : null }
                     </React.Fragment>
                 }
             </div>
